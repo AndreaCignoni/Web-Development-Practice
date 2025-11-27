@@ -21,36 +21,27 @@ body {
     border-radius: 4px;
 }
 
-/* ---- Corner Images ---- */
+/* Base style for all corner images */
 .corner-image {
-    position: absolute;
+    position: fixed;
+    width: 180px;
+    height: auto;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+/* Upper Right */
+.corner-image-top-right {
     top: 10px;
     right: 10px;
-    width: 180px;
-    height: auto;
-    z-index: 10;
-    opacity: 0.9;
 }
 
-.corner-image-lower {
-    position: fixed;
+/* Lower Right */
+.corner-image-bottom-right {
     bottom: 10px;
     right: 10px;
-    width: 180px;
-    height: auto;
-    z-index: 10;
-    opacity: 0.9;
 }
 
-.corner-image-lower-left {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    width: 180px;
-    height: auto;
-    z-index: 10;
-    opacity: 0.9;
-}
 
 /* ---- Keep content above background images ---- */
 header, nav, main, footer {
@@ -111,26 +102,29 @@ table, th, td {
 
 /* Index Page */
 body.index-page {
-    background-image: url('/images/Background1.png');
+    background-image: url('/images/Background_1.jpg'); /* Background image taken from WallpaperBat: https://wallpaperbat.com/80s-pattern-wallpapers3 */
+    background-size: cover;     /* Fills screen */
+    background-position: center;
 }
 
 /* Games & Events Page */
 body.events-page {
-    background-image: url('/images/Background2.png');
+    background-image: url('/images/Background_2.png'); /* Background image pngtree taken from Pngtree : https://pngtree.com/freebackground/colorful-geometric-elements-memphis-style-pattern-the-era-80-rsquo_1899291.html */
 }
 
 /* Signup Page */
 body.signup-page {
-    background-image: url('/images/Background3.png');
+    background-image: url('/images/Background_3.png'); /* Background image pngtree taken from Pngtree : https://pngtree.com/freebackground/black-and-white-geometric-elements-memphis-style-pattern-the-era-80-rsquo_1881935.html */
     background-position: top left;
 }
 
 /* Contact Page */
 body.contact-page {
-    background-image: url('/images/Background4.png');
+    background-image: url('/images/Background_4.jpg'); /* Background image pngtree taken from Deposit Photo : https://depositphotos.com/vectors/80s-style-background.html */
 }
 
 /* About Page */
 body.about-page {
-    background-image: url('/images/Background5.png');
+    background-image: url('/images/Background_5.jpg.avif'); /* Background image pngtree taken from Freepik : https://www.freepik.com/free-photos-vectors/80s-background */
+}
 }
