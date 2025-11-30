@@ -8,51 +8,58 @@
 </head>
 <body class="about-page">
 
-  <!-- AI-generated asset pictures -->
-  <img src="/images/Corner1.png" alt="Retro Art" class="corner-image-top-right">
-  <img src="/images/Background1" alt="Retro Art" class="corner-image-bottom-right">
-
   <header>
     <h1>About Us</h1>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="games-events.html">Games Events</a></li>
         <li><a href="signup.html">Join The Club</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html" aria-current="page">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="content-container">
+  <div class="float-container">
+    <!-- CONTAINER 1 -->
+    <div class="float-column">
+      <img src="/images/central-1.png" alt="" class="column-img">
 
-    <!-- Aside: Quick Info & Fun Facts -->
-    <aside class="about-aside">
-      <h3>Quick Info</h3>
+      <h2>Quick Info</h2>
       <ul>
         <li>Founded in 2023 by MTU students passionate about retro games.</li>
         <li>All events are free for MTU students.</li>
         <li>Membership includes access to tournaments, social nights, and workshops.</li>
       </ul>
 
-      <h3>Fun Facts</h3>
+      <h2>Fun Facts</h2>
       <ul>
         <li>We host the “Arcade Revival Party” every spring!</li>
         <li>Our boardgame nights include rare classics like “Twilight Imperium”.</li>
         <li>Members often bring nostalgic snacks from their childhood.</li>
       </ul>
 
-      <h3>Useful Links</h3>
+      <h2>Useful Links</h2>
       <ul>
-        <li><a href="https://www.retrogames.co.uk" target="_blank">Retro Games UK</a></li>
-        <li><a href="https://www.classicgamesarcade.com" target="_blank">Classic Games Arcade</a></li>
-        <li><a href="https://www.boardgamegeek.com" target="_blank">BoardGameGeek</a></li>
+        <li><a href="https://www.retrogames.co.uk" target="_blank" rel="noopener noreferrer">
+            Retro Games UK <span class="sr-only">(opens in a new tab)</span>
+           </a>
+        </li>
+        <li><a href="https://www.classicgamesarcade.com" target="_blank" rel="noopener noreferrer">
+          Classic Games Arcade <span class="sr-only">(opens in a new tab)</span>
+            </a>
+       </li>
+        <li><a href="https://www.boardgamegeek.com" target="_blank" rel="noopener noreferrer">
+          BoardGameGeek <span class="sr-only">(opens in a new tab)</span>
+            </a>
+        </li>
       </ul>
-    </aside>
+    </div>
 
-    <main>
-      <section>
+    <!-- COLUMN 2 -->
+    <div class="float-column">
+     <section>
         <h2>Who We Are</h2>
         <p>
           Welcome to the Retro Games Club – a student-led society for anyone who loves
@@ -62,14 +69,12 @@
         </p>
       </section>
 
-      <section>
+     <section>
         <h2>About This Website</h2>
         <p>
           This website serves as the central hub for everything our society offers.
           Here you can browse upcoming events, explore retro gaming activities,
-          register for tournaments, and sign up to become a member. Whether you’re new
-          to retro games or a lifelong fan, this site helps you stay connected and
-          involved with our community.
+          register for tournaments, and sign up to become a member.
         </p>
       </section>
 
@@ -83,6 +88,12 @@
           <li>Get involved in running events and shaping the society.</li>
         </ul>
       </section>
+      <img src="/images/central.png" alt="" class="column-img">
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="float-column">
+      <img src="/images/central-2.png" alt="" class="column-img">
 
       <section>
         <h2>Frequently Asked Questions (FAQ)</h2>
@@ -94,16 +105,15 @@
         <p>No. The Retro Games Club is free for all MTU students.</p>
 
         <h3>3. How often do events take place?</h3>
-        <p>
-          We host major events each semester, along with smaller meetups throughout the year.
-          Check our Events page for the latest schedule.
-        </p>
+        <p>We host major events each semester and smaller meetups throughout the year.</p>
 
         <h3>4. Can I bring my own games or consoles?</h3>
         <p>Absolutely! Students often bring personal favourites for others to try.</p>
       </section>
-    </main>
-
-  </div> <!-- end content-container -->
-</body>
+    </div> 
+  </div><!-- end content-container -->
+  <footer>
+    <p>&copy; 2025 MTU Retro Games Club</p>
+    <p>All images displayed on this web page are AI-generated.</p>
+  </footer>
 </html>

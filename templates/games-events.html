@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games Events</title>
-  <link rel="stylesheet" href="/style/styles.css">
-</head>
-<body class="events-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games Events</title>
+    <link rel="stylesheet" href="/style/styles.css" />
+  </head>
 
-  <!-- AI-generated pictures -->
-  <img src="/images/Corner3.png" alt="Retro Art" class="corner-image-top-right”>
-  <img src="/images/Background3.png" alt="Retro Art" class="corner-image-bottom-right”>
-
-  <header>
-    <h1>Games Events</h1>
-    <nav>
+  <body class="events-page">
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="games-events.html">Games Events</a></li>
+        <li><a href="games-events.html" aria-current="page">Games Events</a></li>
         <li><a href="signup.html">Join The Club</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
-  </header>
+
+    <header>
+      <div class="header-container">
+        <h1>MTU Retro Games Club - Events &amp; Tournaments 2026</h1>
+      </div>
+    </header>
 
     <main>
-      <h2 class="events-heading">Retro Games Club - Events (2026)</h2>
-
+      <!-- Events Table -->
       <table>
+        <caption class="sr-only">Upcoming club events — dates, locations and how to join</caption>
         <thead>
           <tr>
-            <th>Event Name</th>
-            <th>Date &amp; Time</th>
-            <th>Location</th>
-            <th>How to join</th>
+            <th scope="col">Event Name</th>
+            <th scope="col">Date &amp; Time</th>
+            <th scope="col">Location</th>
+            <th scope="col">How to join</th>
           </tr>
         </thead>
 
         <tbody>
-
           <!-- Event 1 -->
           <tr>
             <td>
-              <img src="/images/icon1.png" class="event-icon" alt="Event Icon 1">
+            <img src="/images/icon1.png" class="event-icon" alt="" aria-hidden="true"/>
               Boardgame Bonanza Night
             </td>
             <td>February 20, 2026 · 6:00 PM - 9:00 PM</td>
@@ -53,41 +51,42 @@
 
           <tr class="description-row">
             <td colspan="4">
-              A social evening dedicated to classics like Chess, Risk, and Cluedo.
-              Students can bring their own boardgames or join tables hosted by the club.
+              A social evening dedicated to classics like Chess, Risk, and Cluedo. Students can bring their own boardgames or join
+              tables hosted by the club.
             </td>
           </tr>
 
-          <tr>
-            <td colspan="4"><h3>Upcoming Special Treat: few places remained!</h3></td>
+          <!-- Event 2 -->
+          <tr class="special-group special-top">
+            <td colspan="4">
+             <section aria-labelledby="special-treat">
+              <h3 id="special-treat">Upcoming special treat — few places remain!</h3>
+              <p>Hurry up or you will regret it. Be there or be squared!</p>
+              </section>
+            </td>
           </tr>
 
-          <!-- Event 2 -->
-          <tr>
+          <tr class="special-group">
             <td>
-              <img src="/images/icon2.png" class="event-icon" alt="Event Icon 2">
-              ==>Arcade Revival Party&lt;==
+              <img src="/images/icon2.png" class="event-icon" alt="" aria-hidden="true" />
+              Arcade Revival Party
             </td>
             <td>March 28, 2026 · 5:00 PM - 10:00 PM</td>
             <td>MTU Sports Hall</td>
             <td>Register online through the MTU Sports Hall booking system. Entry is free, but spots are limited.</td>
           </tr>
 
-          <tr>
-            <td colspan="4">********************************************************</td>
-          </tr>
-
-          <tr class="description-row">
+          <tr class="special-group special-bottom description-row">
             <td colspan="4">
-              Relive the golden age of arcade machines with Pac-Man, Space Invaders, and Street Fighter II setups.
-              Includes a “high score challenge” leaderboard.
+            Relive the golden age of arcade machines with Pac-Man, Space Invaders, and Street Fighter II setups.
+            Includes a “high score challenge” leaderboard.
             </td>
           </tr>
 
           <!-- Event 3 -->
           <tr>
             <td>
-              <img src="/images/icon3.png" class="event-icon" alt="Event Icon 3">
+              <img src="/images/icon3.png" class="event-icon" alt="" aria-hidden="true"/>
               Retro Console Night
             </td>
             <td>May 16, 2026 · 7:00 PM - 11:00 PM</td>
@@ -97,15 +96,15 @@
 
           <tr class="description-row">
             <td colspan="4">
-              A throwback to consoles like the NES, Sega Mega Drive, and PlayStation 1.
-              Multiplayer Mario Kart and Tekken tournaments will run throughout the night.
+              A throwback to consoles like the NES, Sega Mega Drive, and PlayStation 1. Multiplayer Mario Kart and Tekken
+              tournaments will run throughout the night.
             </td>
           </tr>
 
           <!-- Event 4 -->
           <tr>
             <td>
-              <img src="/images/icon4.png" class="event-icon" alt="Event Icon 4">
+              <img src="/images/icon4.png" class="event-icon" alt="" aria-hidden="true"/>
               Playground Games Festival
             </td>
             <td>September 12, 2026 · 1:00 PM - 5:00 PM</td>
@@ -115,14 +114,12 @@
 
           <tr class="description-row">
             <td colspan="4">
-              Outdoor fun with schoolyard classics like Red Rover, Bulldog, and Hopscotch.
-              A lighthearted event to mix nostalgia with fitness.
+              Outdoor fun with schoolyard classics like Red Rover, Bulldog, and Hopscotch. A lighthearted event to mix nostalgia
+              with fitness.
             </td>
           </tr>
-
         </tbody>
       </table>
-
 
       <!-- Tournaments Section -->
       <h2 class="events-heading">Retro Games Club - Tournaments (2026)</h2>
@@ -138,11 +135,10 @@
         </thead>
 
         <tbody>
-
           <!-- Event 5 -->
           <tr>
             <td>
-              <img src="/images/icon5.png" class="event-icon" alt="Event Icon 5">
+              <img src="/images/icon5.png" class="event-icon" alt="" aria-hidden="true"/>
               PC Retro LAN Tournament
             </td>
             <td>April 25, 2026 · 12:00 PM - 8:00 PM</td>
@@ -152,15 +148,14 @@
 
           <tr class="description-row">
             <td colspan="4">
-              A LAN party featuring Doom, Quake, and Age of Empires II.
-              Teams battle for bragging rights and retro-themed prizes.
+              A LAN party featuring Doom, Quake, and Age of Empires II. Teams battle for bragging rights and retro-themed prizes.
             </td>
           </tr>
 
           <!-- Event 6 -->
           <tr>
             <td>
-              <img src="/images/icon6.png" class="event-icon" alt="Event Icon 6">
+              <img src="/images/icon6.png" class="event-icon" alt="" aria-hidden="true"/>
               Playground Olympics
             </td>
             <td>October 18, 2026 · 11:00 AM - 4:00 PM</td>
@@ -170,27 +165,28 @@
 
           <tr class="description-row">
             <td colspan="4">
-              A quirky tournament where students compete in playground games like Tug of War, Dodgeball, and Sack Races.
-              Points awarded per event, with medals for top scorers.
+              A quirky tournament where students compete in playground games like Tug of War, Dodgeball, and Sack Races. Points
+              awarded per event, with medals for top scorers.
             </td>
           </tr>
-          </table>
         </tbody>
-        <div class="aside-attribution">
-          <p><strong>Icon attributions</strong></p>
-          <ol number="1">
-            <li>Pac-Man: Adury 5711</li>
-            <li>Game Console: Hilmy Abiyyu</li>
-            <li>Joypad: Freepik</li>
-            <li>Retro: Andrew</li>
-            <li>Castle: Hina Hassan</li>
-            <li>Music Device: Hina Hassan</li>
-          </ul>
-        </div>
-      
+      </table>
 
       <a href="signup.html" class="table-button">Join the Club</a>
     </main>
-  </div> <!-- end content-container -->
-</body>
+        <!-- AI-generated pictures -->
+
+    <footer>
+        <p>&copy; 2025 MTU Retro Games Club</p>
+                <p>Icon sources and attributions:</p>
+        <ol>
+          <li>Pac-Man: Adury 5711</li>
+          <li>Game Console: Hilmy Abiyyu</li>
+          <li>Joypad: Freepik</li>
+          <li>Retro: Andrew</li>
+          <li>Castle: Hina Hassan</li>
+          <li>Music Device: Hina Hassan</li>
+        </ol>
+    </footer>
+  </body>
 </html>

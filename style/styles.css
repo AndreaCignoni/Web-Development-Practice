@@ -1,130 +1,444 @@
-/* ---- Default Background (no image unless page class is added) ---- */
+/* Reset Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(146, 97, 154);
+  line-height: 1.6;
+  padding: 20px;
 }
 
-/* ---- AI-generated note ---- */
-.ai-note {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 0.8rem;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+/* Navigation Bar */
+
+nav {
+  background: lightblue;
+  padding: 10px 0;
+  margin-bottom: 20px;
 }
 
-/* Base style for all corner images */
-.corner-image {
-    position: fixed;
-    width: 180px;
-    height: auto;
-    z-index: 10;
-    opacity: 0.9;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Upper Right */
-.corner-image-top-right {
-    top: 10px;
-    right: 10px;
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Lower Right */
-.corner-image-bottom-right {
-    bottom: 10px;
-    right: 10px;
+nav ul li a:hover {
+  color: red;
+}
+
+/* --- Footer: ensure it is not width-constrained by any parent --- */
+footer {
+  /* make full viewport-width and reset any max-width inherited */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  clear: both;            /* sits below floats */
+  background: #222;       
+  color: #fff;            
+  padding: 20px;
+  text-align: center;
+  margin: 0;              /* remove auto margin that could center it */
+  position: relative;     /* keep in normal flow but allow precise control if needed */
+  left: 0;
+  right: 0;
+}
+
+/* footer list and links styling */
+footer a {
+  color: #8ecaff;
+}
+
+footer p,
+footer ol,
+footer li {
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: 5px 0;
+}
+
+footer p {
+  font-weight: bold
+}
+
+footer ol {
+  list-style: decimal;
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Home Page */
+
+.header-container {
+  background-color: lightcoral;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.header-container h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.header-paragraph {
+  flex: 1;
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #333;
+}
+
+.header-image img {
+  width: 380px;
+  border-radius: 8px;
+  display: block;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  font-weight: 500; 
+}
+
+.tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  font-weight: 500; 
 }
 
 
-/* ---- Keep content above background images ---- */
-header, nav, main, footer {
-    position: relative;
-    z-index: 5;
+.join-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-/* ---- Tables ---- */
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    border-style: groove;
-    padding: 10px;
+.join-button:hover {
+  background-color: #45a049;
 }
 
-/* ---- Map + Video Containers ---- */
-.map-container {
-    width: 100%;
-    height: 400px;
+.video-image-container {
+  display: flex;
+  justify-content: center;  /* horizontally center the container */
+  align-items: center;      /* vertically align video and image */
+  gap: 20px;                /* space between video and image */
+  flex-wrap: wrap;          /* stack on smaller screens */
 }
 
-.map-frame {
-    width: 100%;
-    height: 100%;
-    border: 0;
+.video-image-container iframe,
+.video-image-container img {
+  width: 500px;     /* equal width */
+  height: 315px;    /* equal height (16:9 aspect ratio) */
+  object-fit: cover; /* ensures image fits nicely */
 }
 
-.video-container iframe {
-    width: 100%;
-    height: 360px;
+@media (max-width: 1100px) {
+  .video-image-container iframe,
+  .video-image-container img {
+    width: 100%;   /* stack and fill width on smaller screens */
+    height: auto;  /* maintain aspect ratio */
+  }
 }
 
-/* ---- Event Icons ---- */
-.event-icon {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-/* ---- Icon Attribution ---- */
-.icon-attribution {
-    margin-top: 30px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 6px;
-    width: fit-content;
-}
-
-.icon-attribution ul {
-    margin: 0;
-    padding-left: 20px;
-}
-
-/* -------------------------------------------------- */
-/* -------- PAGE-SPECIFIC BACKGROUND IMAGES --------- */
-/* -------------------------------------------------- */
-
-/* Index Page */
-body.index-page {
-    background-image: url('/images/Background_1.jpg'); /* Background image taken from WallpaperBat: https://wallpaperbat.com/80s-pattern-wallpapers3 */
-    background-size: cover;     /* Fills screen */
-    background-position: center;
-}
-
-/* Games & Events Page */
-body.events-page {
-    background-image: url('/images/Background_2.png'); /* Background image pngtree taken from Pngtree : https://pngtree.com/freebackground/colorful-geometric-elements-memphis-style-pattern-the-era-80-rsquo_1899291.html */
+#video h2{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 200%;
 }
 
 /* Signup Page */
-body.signup-page {
-    background-image: url('/images/Background_3.png'); /* Background image pngtree taken from Pngtree : https://pngtree.com/freebackground/black-and-white-geometric-elements-memphis-style-pattern-the-era-80-rsquo_1881935.html */
-    background-position: top left;
+.signup-form form {
+  background-color: #b6bdbe; 
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Contact Page */
-body.contact-page {
-    background-image: url('/images/Background_4.jpg'); /* Background image pngtree taken from Deposit Photo : https://depositphotos.com/vectors/80s-style-background.html */
+.signup-form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-/* About Page */
-body.about-page {
-    background-image: url('/images/Background_5.jpg.avif'); /* Background image pngtree taken from Freepik : https://www.freepik.com/free-photos-vectors/80s-background */
+.signup-form legend {
+  font-weight: bold;
+  padding: 0 10px;
 }
+
+/*Adding spaces between labels and inputs */
+.signup-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="date"],
+.signup-form select,
+.signup-form textarea,
+.signup-form input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.signup-form input[type="radio"],
+.signup-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+/* Style submit and reset buttons */
+.signup-form input[type="submit"] {
+  display: inline-block;
+  background-color: #4caf50;    
+  color: #fff;                  
+  padding: 12px 30px;           /* large clickable area */
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.signup-form input[type="submit"]:hover {
+  background-color: #45a049;    /* darker green on hover */
+}
+
+
+.signup-form input[type="reset"] {
+  background-color: #ccc;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.signup-form input[type="reset"]:hover {
+  background-color: #999;
+  color: #fff;
+}
+
+/* Responsive adjustments for signup form */
+@media (max-width: 768px) {
+  .signup-form form {
+    padding: 20px;
+  }
+
+  .signup-form input[type="text"],
+  .signup-form input[type="email"],
+  .signup-form input[type="date"],
+  .signup-form select,
+  .signup-form textarea,
+  .signup-form input[type="file"] {
+    width: 100%;
+  }
+}
+
+/* Games Events Page */
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 10px 0;  /* remove top margin, keep bottom spacing */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top; /* aligns icons */
+  line-height: 1.5;
+}
+
+.event-icon {
+  width: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.description-row td {
+  background: #f9f7fb;  /* soft light purple */
+  font-style: italic;
+}
+
+.special-event td {
+  background-color: #fff6cc;
+  font-weight: bold;
+  border: 2px solid #f0d778;
+}
+
+/* Headings */
+.events-heading {
+  text-align: center;
+  margin: 20px 0;   /* small margin to reduce extra space */
+}
+
+/* Shared styling */
+.special-group td {
+  background: #fff7d6;
+  border-left: 4px solid #ffcc00;
+  border-right: 4px solid #ffcc00;
+}
+
+/* Top border only on first row */
+.special-group.special-top td {
+  border-top: 4px solid #ffcc00;
+}
+
+/* Bottom border only on last row */
+.special-group.special-bottom td {
+  border-bottom: 4px solid #ffcc00;
+}
+
+/* Join button */
+.table-button {
+  display: inline-block;       
+  padding: 12px 24px;          
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px auto 0 auto;    
+  transition: background-color 0.2s ease;
+}
+
+.table-button:hover {
+  background-color: #45a049;
+}
+
+/* About Us Page */
+
+/* THREE COLUMN FLOAT LAYOUT */
+
+/* --- Columns: exact gutter math to avoid wrapping --- */
+.float-column {
+  float: left;
+  /* subtract total horizontal gutters (2 * 20px = 40px) and split remaining width into 3 equal columns */
+  width: calc((100% - 40px) / 3);
+  margin-right: 20px;   /* gutter between columns */
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.float-column a {
+  color: inherit;   /* keeps the same text color as the column */
+}
+
+.float-column a:hover {
+  text-decoration: underline; 
+}
+
+/* no right margin on the last column so sums add up exactly */
+.float-column:nth-child(3) {
+  margin-right: 0;
+}
+
+@media (max-width: 900px) {
+  .float-container { grid-template-columns: 1fr; }
+}
+
+
+/* --- Contact Page Layout --- */
+.contact-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  margin: 20px 0;
+}
+
+.contact-box {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1 1 30%; /* Grow/shrink, default width ~30% */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-box iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  border-radius: 4px;
+}
+
+.contact-box form input,
+.contact-box form textarea,
+.contact-box form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.contact-box form button {
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-box form button:hover {
+  background-color: #e6b800;
+}
+
+/* --- Responsive Adjustments for Mobile --- */
+@media (max-width: 900px) {
+  .contact-page main {
+    grid-template-areas: 
+      "map"
+      "form"
+      "info";   /* stack vertically */
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
 }

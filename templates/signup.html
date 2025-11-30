@@ -1,107 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup</title>
-  <link rel="stylesheet" href="/style/styles.css">
-</head>
-<body class="signup-page">
-
-  <!-- Ai generated pictures -->
-  <img src="/images/Corner5.png" alt="Retro Art" class="corner-image-top-right”>
-  <img src="/images/Background5.png" alt="Retro Art" class="corner-image-bottom-right">
-  
-  <header>
-
-    <h1>Signup Page</h1>
-    <nav>
-    <ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Signup</title>
+    <link rel="stylesheet" href="/style/styles.css"/>
+  </head>
+  <body class="signup-page">
+    <!-- Navigation Bar -->
+    <nav aria-label="Main navigation">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="games-events.html">Games Events</a></li>
-        <li><a href="signup.html">Join The Club</a></li>
+        <li><a href="signup.html" aria-current="page">Join The Club</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="about.html">About Us</a></li>
-    </ul>
+      </ul>
     </nav>
-  </header>
-  <main>
-    <form action="https://webdevcit.com/displayvalues.php" method="post" target="_blank">
+
+    <!-- Header -->
+
+    <div class="header-container">
+      <h1>Join the MTU Retro Games Club</h1>
+    </div>
+
+    <main class="signup-form">
+      <form action="https://webdevcit.com/displayvalues.php" method="post" target="_blank">
         <fieldset>
-        <legend>Personal information</legend>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br>
-        
-        <br>
-        <label for="entry_date">Date started in MTU:</label>
-        <input type="date" id="entry_date" name="birthday">
-        <label for="department">Department of Study:</label>
-        <select id="department" name="department">
-          <option value="business">Faculty of Business & Humanities</option>
-          <option value="engineering">Faculty Of Engineering & Science</option>
-          <option value="law">Faculty of Law</option>
-          <option value="medicine">Faculty of Medicine</option>
-        </select>
+          <legend>Personal information</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname" required/>
+          <br/>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" required/>
+          <br/>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required/>
+          <br/>
+
+          <br/>
+          <label for="entry_date">Date started in MTU:</label>
+          <input type="date" id="entry_date" name="entrydate"/>
+          <label for="campus">MTU Campus:</label>
+          <select id="campus" name="campus">
+            <option value="" disabled selected>Select your campus</option>
+            <option value="bishopstown">MTU Bishopstown Campus</option>
+            <option value="csm">MTU Cork School of Music</option>
+            <option value="crawford">MTU Crawford College of Art & Design</option>
+          </select>
+          <label for="department">Department of Study:</label>
+          <select id="department" name="department">
+            <option value="business">Faculty of Business & Humanities</option>
+            <option value="engineering">Faculty Of Engineering & Science</option>
+            <option value="law">Faculty of Law</option>
+            <option value="medicine">Faculty of Medicine</option>          
+          </select>
+
         </fieldset>
-        <br>
+        <br/>
         <fieldset>
-        <legend>Gaming Preferences</legend>
-        <p>What type of games do you prefer? (Select all that apply)</p>
-        <input type="checkbox" id="board" name="game_type" value="board">
-        <label for="board">Board Games</label><br>
-        <input type="checkbox" id="console" name="game_type" value="console">
-        <label for="console">Console Games</label><br>
-        <input type="checkbox" id="arcade" name="game_type" value="arcade">
-        <label for="arcade">Arcade Games</label><br>
-        <input type="checkbox" id="pc" name="game_type" value="pc">
-        <label for="pc">PC Games</label><br>
-        <input type="checkbox" id="playground" name="game_type" value="playground">
-        <label for="playground">Playground Games</label><br>
-        <label for="other_games">Other Games:</label>
-        <input type="text" id="other_games" name="other_games">
-        <br>
-        <p>Have they previously attended one of the club events?</p>
-        <input type="radio" id="yes" name="prev_participant" value="Yes">
-        <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="prev_participant" value="No">
-        <label for="no">No</label><br>
-        <p>What events are of interest?</p>
-        <input type="checkbox" id="event1" name="event1" value="Boardgame Bonanza Night">
-        <label for="event1">Boardgame Bonanza Night</label><br>
-        <input type="checkbox" id="event2" name="event2" value="Arcade Revival Party">
-        <label for="event2">Arcade Revival Party</label><br>
-        <input type="checkbox" id="event3" name="event3" value="Retro Console Night">
-        <label for="event3">Retro Console Night</label><br>
-        <input type="checkbox" id="event4" name="event4" value="Playground Games Festival">
-        <label for="event3">Playground Games Festival</label><br>
-        <p>Would you be interested in partecipating in one of our tournaments?</p>
-        <input type="radio" id="tourney_yes" name="tourney_interest" value="Yes">
-        <label for="tourney_yes">Yes</label><br>
-        <input type="radio" id="tourney_no" name="tourney_interest" value="No">
-        <label for="tourney_no">No</label><br>
-        <p>If yes, which one?</p>
-        <input type="checkbox" id="tournament1" name="tournament1" value="PC Retro LAN Tournament">
-        <label for="tournament1">PC Retro LAN Tournament</label><br>
-        <input type="checkbox" id="tournament2" name="tournament2" value="Playground Olympics">
-        <label for="tournament2"> Playground Olympics</label><br>
-        <p>Please give a brief account of why you want to join the club.</p>
-        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
-        <p>Would you rather receive a printed or virtual membership card?</p>
-        <input type="radio" id="virtual" name="card_type" value="Virtual" checked>
-        <label for="virtual">Virtual</label><br> 
-        <input type="radio" id="printed" name="card_type" value="Printed">
-        <label for="printed">Printed</label><br>
-        <label for="myPhoto">Please upload a colour passport-style photograph for your membership card:</label>
-        <input type="file" id="myfile" name="myfile"> 
+          <legend>Gaming Preferences</legend>
+          <p>What type of games do you prefer? (Select all that apply)</p>
+          <input type="checkbox" id="board" name="game_type" value="board"/>
+          <label for="board">Board Games</label>
+          <br/>
+          <input type="checkbox" id="console" name="game_type" value="console"/>
+          <label for="console">Console Games</label>
+          <br/>
+          <input type="checkbox" id="arcade" name="game_type" value="arcade"/>
+          <label for="arcade">Arcade Games</label>
+          <br/>
+          <input type="checkbox" id="pc" name="game_type" value="pc" />
+          <label for="pc">PC Games</label>
+          <br/>
+          <input type="checkbox" id="playground" name="game_type" value="playground"/>
+          <label for="playground">Playground Games</label>
+          <br/>
+          <label for="other_games">Other Games:</label>
+          <input type="text" id="other_games" name="other_games"/>
+          <br/>
+          <label for="retro-game">Favorite Retro Game:</label>
+          <input type="text" id="retro-game" name="retro-game" placeholder="e.g., Pac-Man, Space Invaders">
+          <br/>
+          <p>Have they previously attended one of the club events?</p>
+          <input type="radio" id="yes" name="prev_participant" value="Yes"/>
+          <label for="yes">Yes</label>
+          <br/>
+          <input type="radio" id="no" name="prev_participant" value="No"/>
+          <label for="no">No</label>
+          <br/>
+          <p>What events are of interest?</p>
+          <input type="checkbox" id="event1" name="event1" value="Boardgame Bonanza Night"/>
+          <label for="event1">Boardgame Bonanza Night</label>
+          <br/>
+          <input type="checkbox" id="event2" name="event2" value="Arcade Revival Party"/>
+          <label for="event2">Arcade Revival Party</label>
+          <br/>
+          <input type="checkbox" id="event3" name="event3" value="Retro Console Night"/>
+          <label for="event3">Retro Console Night</label>
+          <br/>
+          <input type="checkbox" id="event4" name="event4" value="Playground Games Festival"/>
+          <label for="event4">Playground Games Festival</label>
+          <br/>
+          <p>Would you be interested in partecipating in one of our tournaments?</p>
+          <input type="radio" id="tourney_yes" name="tourney_interest" value="Yes"/>
+          <label for="tourney_yes">Yes</label>
+          <br/>
+          <input type="radio" id="tourney_no" name="tourney_interest" value="No"/>
+          <label for="tourney_no">No</label>
+          <br/>
+          <p>If yes, which one?</p>
+          <input type="checkbox" id="tournament1" name="tournament1" value="PC Retro LAN Tournament"/>
+          <label for="tournament1">PC Retro LAN Tournament</label>
+          <br/>
+          <input type="checkbox" id="tournament2" name="tournament2" value="Playground Olympics"/>
+          <label for="tournament2">Playground Olympics</label>
+          <br/>
+          <p>Please give a brief account of why you want to join the club.</p>
+          <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+          <p>Would you rather receive a printed or virtual membership card?</p>
+          <input type="radio" id="virtual" name="card_type" value="Virtual" checked/>
+          <label for="virtual">Virtual</label>
+          <br/>
+          <input type="radio" id="printed" name="card_type" value="Printed"/>
+          <label for="printed">Printed</label>
+          <br/>
+          <label for="myfile">Please upload a colour passport-style photograph for your membership card:</label>
+          <input type="file" id="myfile" name="myfile" accept="image/*" aria-describedby="photo-help"/>
+          <span id="photo-help">JPEG/PNG; max 2MB.</span>
         </fieldset>
-        <br>
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">       
-    </form>
-  </main>
-</body>
+        <br/>
+        <input type="submit" value="Submit"/>
+        <input type="reset" value="Reset"/>
+      </form>
+    </main>
+        <!-- AI-generated pictures -->
+
+    <footer>
+        <p>&copy; 2025 MTU Retro Games Club</p>
+        <p>All images displayed on this web page are AI-generated.</p>
+    </footer>
+  </body>
 </html>
