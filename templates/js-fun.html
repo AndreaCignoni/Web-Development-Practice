@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MTU Retro Games Club - JS Fun</title>
+    <link rel="stylesheet" href="/style/styles.css"/>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games-events.html">Games Events</a></li>
+        <li><a href="signup.html">Join The Club</a></li>
+        <li class="current-page"><a href="js-fun.html" aria-current="page">JS Fun</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+        
+        <li class="dropdown-container" 
+            onmouseover="openDropdown()" 
+            onmouseout="closeDropdown()">
+          <button 
+            id="jsFunButton" 
+            onclick="toggleDropdown()" 
+            aria-expanded="false" 
+            aria-controls="jsFunDropdown">
+              JS Interactive
+          </button>
+    
+          <div id="jsFunDropdown" class="dropdown-content">
+            <a href="https://en.wikipedia.org/wiki/Super_Mario_Bros." target="_blank">🕹️ Mario Bros. Wiki</a>
+            <a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank">👻 Pac-Man Wiki</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+      <h1>Interactive Retro Zone: Games and Characters</h1>
+      <p class="tagline">Test your luck, let's see your skills!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="js-main">
+      
+      <!-- First Column -->
+      <section id="character-selector-column">
+        <h2>🎲 Retro Hero & Website Rating</h2>
+
+        <!-- Hover Image -->
+        <!-- retro1.jpg sourced from Freepik: https://www.freepik.com/free-photos-vectors/space-invaders -->
+        <!-- retro2.jpg sourced from Nintendo Classics: https://www.nintendoclassics.net/2021/05/ghosts-n-goblins-punishing-as-hell.html -->
+        <img id="hoverImage" 
+             src="/images/retro1.jpg" 
+             alt="Retro Game Image"
+             onmouseover="changeImage()" 
+             onmouseout="resetImage()">
+
+        <!-- Rating Range -->
+        <div id="ratingContainer">
+        <label for="ratingRange">⭐ Rate Our Website:</label>
+        <input type="range" id="ratingRange" min="1" max="5" step="1" onchange="rateWebsite()">
+        <p id="ratingMessage">Move the slider to rate...</p>
+        </div>
+      </section>
+
+      <!-- Second Column -->
+      <section id="game-column">
+        <h2>🎨 Favourite Character Input</h2>
+        <p>Enter your favourite character below:</p>
+        
+        <input type="text" id="favCharacterInput" placeholder="Type a character name">
+        <button onclick="displayFavouriteCharacter()">Show Character</button>
+        <p id="favCharacterOutput"></p>
+
+        <!-- Comparison Button -->
+        <button onclick="compareCharacters()">Compare with Random Character</button>
+        <p id="comparisonMessage"></p>
+
+        <!-- Random Character Button -->
+        <button id="characterSelectorBtn" onclick="selectRandomCharacter()">
+          Draw a Character
+        </button>
+        
+        <div id="characterOutput">
+          <p>Your character will appear here...</p>
+          <!-- mario.jpg sourced from Pixabay (Alexas_Fotos): https://pixabay.com/photos/mario-figure-game-nintendo-super-1558068/ -->
+          <!-- space-invaders.avif sourced from freepik.com: https://www.freepik.com/free-photos-vectors/space-invaders-pixel-art -->
+          <!-- Arthur.webp sourced from Fandom.com: https://ghostsngoblins.fandom.com/wiki/Arthur -->
+          <!-- donkey-kong.jpg sourced from Nintendo.com: https://www.nintendo.com/en-gb/Games/Arcade/Donkey-Kong-Original-Edition-918598.html?srsltid=AfmBOoo1e-e5_oy_k08W0qtuELDM-scUp6bMfcmoaXKYNgqpcIi9Clsn -->
+          <img id="characterImage" src="/images/corner-1.png" alt="Selected Character">
+          <h3 id="characterName"></h3>
+          <p id="characterBio"></p>
+        </div>
+
+
+        <!-- Speed Click Game -->
+        <h2>⏱️ The Speed Click Challenge</h2>
+        <p>How fast can you click the button 10 times? Your best time wins!</p>
+        
+        <div id="game-area">
+          <p>
+            <strong id="clickCount">Clicks: 0/10</strong> | 
+            <strong id="timerDisplay">Time: 0.00s</strong>
+          </p>
+          
+          <button id="startStopBtn" onclick="startGame()">Start Game</button>
+          <button id="gameClickBtn" onclick="countClick()">Click Me!</button>
+          
+          <p id="gameMessage"></p>
+        </div>
+        
+        <div id="high-score-area">
+          <h3>🏆 Best Time</h3>
+          <p id="bestTime">No record yet.</p>
+        </div>
+      
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 MTU Retro Games Club</p>
+      <p>Images used are sourced from Freepik, Nintendo Classics, and Pixabay (Alexas_Fotos). Attribution included in code comments.</p>
+      <p>Web developer contact details:</p>
+      <p>Andrea Cignoni</p>
+      <p>Email: <a href="mailto:andreacignoni@mtu.com">andreacignoni@mtu.com</a></p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

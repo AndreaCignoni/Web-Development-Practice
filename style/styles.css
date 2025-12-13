@@ -442,3 +442,206 @@ td {
     padding: 20px;
   }
 }
+
+/* --- JS-FUN PAGE SPECIFIC STYLES --- */
+
+/* Main Content Layout (Two Unequal Columns) */
+.js-main {
+    display: flex;
+    gap: 30px; /* Space between columns */
+    padding: 20px 5%; /* Padding around the content */
+    max-width: 1200px;
+    margin: 0 auto 20px auto; /* Center the content and add bottom margin */
+    background-color: #fff; /* White background for the main area */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Narrower Left Column */
+#character-selector-column {
+    flex: 1; 
+    min-width: 250px;
+    padding: 20px;
+    background-color: #f7f3f9;
+    border-radius: 8px;
+    text-align: center;
+
+    display: flex;             
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+/* Rating container pinned at bottom */
+#ratingContainer {
+    margin-top: auto;
+    bottom: 0;
+    position: sticky;         
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+}
+
+
+/* Wider Right Column */
+#game-column {
+    flex: 2;
+    padding: 20px;
+    background-color: #e9f5ff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#character-selector-column h2, #game-column h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+#characterOutput {
+    text-align: center;
+}
+
+/* Styling for the character image/output */
+#characterOutput h3 {
+  font-size: 1.5em;
+  color: #d32f2f;
+  margin-bottom: 0.5em;
+}
+
+#characterOutput img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border: 3px solid #000;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+#characterOutput p {
+  margin: 0.3em 0;
+  font-size: 1em;
+}
+
+
+/* Styling for the hover image (retro1/retro2) */
+#hoverImage {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 4px solid #555;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#hoverImage:hover {
+    transform: scale(1.05);
+}
+
+#characterSelectorBtn, #startStopBtn, #gameClickBtn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+#characterSelectorBtn {
+    background-color: #ffcc00;
+}
+
+#characterSelectorBtn:hover {
+    background-color: #e6b800;
+}
+
+#gameClickBtn {
+    background-color: #4CAF50;
+    color: white;
+    width: 80%;
+    height: 80px;
+    font-size: 1.5rem;
+    display: block;
+    margin: 15px auto;
+}
+
+#gameClickBtn:active {
+    background-color: #3e8e41;
+}
+
+/* Responsive adjustment: Stack columns on smaller screens */
+@media (max-width: 768px) {
+    .js-main {
+        flex-direction: column;
+    }
+}
+
+/* Ensure the list item is positioned relative for the dropdown to be absolute */
+.dropdown-container {
+    position: relative;
+    margin-left: 30px; 
+    display: inline-block; 
+}
+
+/* The Button itself */
+.dropdown-container button {
+    background-color: #ff6347; 
+    color: white; 
+    border: 2px solid #cc4e39;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.2;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.dropdown-container button:hover {
+    background-color: #e55338;
+    color: white;
+}
+
+.dropdown-container button:active {
+    transform: translateY(1px);
+}
+
+/* The actual dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #ffe0d5;
+    min-width: 180px;
+    z-index: 10;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block; 
+    text-align: left;
+    white-space: nowrap; 
+}
+
+.dropdown-content a:hover {
+    background-color: #ffb6a9;
+    color: #333;
+}
+
+/* Class added by JS to show the menu */
+.dropdown-show {
+    display: block;
+}
